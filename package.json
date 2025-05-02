@@ -3,20 +3,22 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "node -r ts-node/register indexer.ts",
-    "dev": "set NODE_ENV=development&& node -r ts-node/register indexer.ts",
+    "start": "ts-node api/server.ts",
+    "indexer": "ts-node indexer/indexer.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
     "dotenv": "^16.0.0",
-    "ethers": "^6.0.0"
+    "ethers": "^6.0.0",
+    "express": "^5.1.0"
   },
   "devDependencies": {
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.0",
+    "@types/express": "^5.0.1",
     "@types/node": "^20.0.0",
-    "prisma": "^5.0.0"
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
